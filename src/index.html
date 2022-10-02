@@ -66,7 +66,7 @@
         <option value="cpf">CPF</option>
         <option value="cnpj">CNPJ</option>
       </select>
-      <input id="access-input" title="Insira os dados de acesso"  pattern="\d{4}" type="text">
+      <input disabled id="access-input" title="Insira os dados de acesso"  pattern="\d{4}" type="text">
       <button title="Acesse a conta com os dados fornecidos">
         <i class="fas fa-arrow-right"></i>
       </button>
@@ -137,9 +137,30 @@
     <button id="close-menu-button" onclick="closeMenu()"><i class="fa-solid fa-times"></i></button>
   </div>
 
+  <script src="./scripts/common/vanilla-mask.js"></script>
   <script src="./scripts/home/index.js"></script>
   <script src="./scripts/home/writer.js"></script>
+
   <noscript>
+    <style>
+      header, main, #menu * {
+        display: none;
+      }
+      .no-script {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 2rem;
+      }
+    </style>
+    <div class="no-script">
+      <p>
+        Este site utiliza Javascript para funcionar, portanto é preciso que este esteja habilitado no seu navegador.
+        <a href="https://support.microsoft.com/pt-br/office/habilitar-javascript-7bb9ee74-6a9e-4dd1-babf-b0a1bb136361">Clique aqui ver como reabilita-lo</a>
+      </p>
+    </div>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K86JG3R"
     height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>

@@ -1,7 +1,6 @@
 const menu = document.getElementById('menu');
 const nav = menu.firstElementChild;
 const collapsables = document.getElementsByClassName('collapsable');
-const selects = document.getElementsByClassName('select-button');
 
 function openMenu() {
   menu.style.width = '50%';
@@ -52,4 +51,13 @@ function handleOption(event) {
   const text = event.target.value;
 
   input.placeholder = text.toUpperCase();
+  input.disabled = false;
+
+  if (text === 'cpf') {
+    VMasker(input).maskPattern('999.999.999-99')
+    input.maxLength = 14;
+  } else {
+    VMasker(input).maskPattern('99.999.999/9999-99')
+    input.maxLength = 18;
+  }
 }
