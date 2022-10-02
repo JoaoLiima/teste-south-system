@@ -3,12 +3,13 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  padding: 0 0 0 2rem;
   height: var(--menu-height);
 }
 
 header .logo {
-  width: 100%;
+  position: absolute;
+  left: 2rem;
+  z-index: -1;
 }
 
 header .logo img {
@@ -21,28 +22,22 @@ header .access-type {
   justify-content: center;
 }
 
-header .access-type input {
+header input {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid var(--gray);
 
-  margin: 0 2rem;
   padding: 0.2rem 0.5rem;
 }
 
-header .access-type input:focus {
-  outline: none;
-  border-bottom: 2px solid var(--primary)
+header .access-type input {
+  border-bottom: 1px solid var(--gray);
+  margin: 0 2rem;
 }
 
 header select {
   border: none;
   background-color: transparent;
   font-weight: 600;
-}
-
-header select::after {
-  background-color: blue;
 }
 
 header .access-type button {
@@ -65,6 +60,23 @@ header .controls i {
   font-size: 1.5rem;
 }
 
+header .expandable{
+  height: var(--menu-height);
+  background-color: var(--dark-gray);
+  display: flex;
+  align-items: center;
+  max-width: 0;
+  overflow: hidden;
+  transition: max-width 0.5s ease-in-out;
+}
+
+header .expandable input{
+  border-bottom: 1px solid white;
+  width: 8rem;
+  margin-right: 1rem;
+  color: white;
+}
+
 .access-account-button {
   display: none;
   visibility: hidden;
@@ -72,6 +84,11 @@ header .controls i {
 
 #open-menu-button {
   background-color: var(--primary);
+}
+
+header input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--primary)
 }
 
 @media (max-width: 1100px)  {

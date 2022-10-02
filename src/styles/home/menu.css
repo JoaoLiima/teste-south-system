@@ -24,7 +24,7 @@
   padding: 0 4rem;
 }
 
-.collapsable {
+#menu .collapsable-y {
   width: 100%;
   max-width: var(--menu-item-width);
   min-height: 6.25rem;
@@ -34,14 +34,14 @@
   font-weight: 600;
   white-space: nowrap;
   
-  padding: 2rem 5rem;
+  padding: 0 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
 }
 
-.expandable {
+#menu .expandable {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
@@ -54,19 +54,19 @@
   padding: 1rem 5rem;
 }
 
-#menu .collapsable i {
+#menu .collapsable-y i {
   font-size: 2rem;
 }
 
-#menu .collapsable:hover, #menu a:hover {
+#menu .collapsable-y:hover, #menu a:hover {
   background-color: var(--dark-green);
 }
 
-#menu .collapsable:not(:last-of-type):hover {
+#menu .collapsable-y:not(:last-of-type):hover {
   border-bottom: 1px solid var(--dark-green);
 }
 
-#menu .collapsable:not(:last-of-type) {
+#menu .collapsable-y:not(:last-of-type) {
   border-bottom: 1px solid white;
 }
 
@@ -91,7 +91,7 @@
 }
 
 @media (max-width: 1100px)  {
-  .collapsable {
+  #menu .collapsable-y {
     width: 25rem;
   }
 
@@ -119,15 +119,15 @@
     margin-bottom: 1rem;
   }
 
-  .collapsable i {
+  #menu .collapsable-y i {
     display: none;
   }
 
-  .collapsable{
+  #menu .collapsable-y{
     justify-content: center;
   }
 
-  .expandable a {
+  #menu .expandable a {
     display: flex;
     align-items: center;
     justify-content: center;

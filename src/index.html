@@ -56,6 +56,7 @@
 <body>
 
   <header>
+    <div class="spacer"></div>
     <div class="logo">
       <img src="assets/icons/logo.svg" alt="Logo">
     </div>
@@ -66,7 +67,7 @@
         <option value="cpf">CPF</option>
         <option value="cnpj">CNPJ</option>
       </select>
-      <input disabled id="access-input" title="Insira os dados de acesso"  pattern="\d{4}" type="text">
+      <input disabled id="access-input" title="Insira os dados de acesso" type="text">
       <button title="Acesse a conta com os dados fornecidos">
         <i class="fas fa-arrow-right"></i>
       </button>
@@ -75,7 +76,10 @@
     <div class="controls">
       <button class="text-button access-account-button">Acesse sua conta</button>
       <button class="text-button">Abra sua conta</button>
-      <button class="icon-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button class="icon-button collapsable-x"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <div class="expandable">
+        <input type="text" title="Entre com o termo de busca">
+      </div>
       <button class="icon-button" id="open-menu-button" onclick="openMenu()"><i class="fa-solid fa-bars"></i></button>
     </div>
   </header>
@@ -112,21 +116,21 @@
         <button class="text-button">Acesse sua conta</button>
         <button class="text-button">Abra sua conta</button>
       </div>
-      <button class="collapsable">Acesso rápido <i class="fa-solid fa-plus"></i></button>
+      <button class="collapsable-y">Acesso rápido <i class="fa-solid fa-plus"></i></button>
       <div class="expandable">
         <a href="">Conta corrente</a>
         <a href="">Cartões</a>
         <a href="">Consórcios</a>
         <a href="">Crédito</a>
       </div>
-      <button class="collapsable">Para você <i class="fa-solid fa-plus"></i></button>
+      <button class="collapsable-y">Para você <i class="fa-solid fa-plus"></i></button>
       <div class="expandable">
         <a href="">Conta corrente</a>
         <a href="">Cartões</a>
         <a href="">Consórcios</a>
         <a href="">Crédito</a>
       </div>
-      <button class="collapsable">Para sua empresa <i class="fa-solid fa-plus"></i></button>
+      <button class="collapsable-y">Para sua empresa <i class="fa-solid fa-plus"></i></button>
       <div class="expandable">
         <a href="">Conta corrente</a>
         <a href="">Cartões</a>
@@ -137,7 +141,10 @@
     <button id="close-menu-button" onclick="closeMenu()"><i class="fa-solid fa-times"></i></button>
   </div>
 
+  <!-- Input mask lib -->
   <script src="./scripts/common/vanilla-mask.js"></script>
+
+  <!-- Page functions -->
   <script src="./scripts/home/index.js"></script>
   <script src="./scripts/home/writer.js"></script>
 

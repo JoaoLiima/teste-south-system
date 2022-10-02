@@ -1,6 +1,7 @@
 const menu = document.getElementById('menu');
 const nav = menu.firstElementChild;
-const collapsables = document.getElementsByClassName('collapsable');
+const collapsablesY = document.getElementsByClassName('collapsable-y');
+const collapsablesX = document.getElementsByClassName('collapsable-x');
 
 function openMenu() {
   menu.style.width = '50%';
@@ -12,37 +13,58 @@ function closeMenu() {
   nav.style.animation = 'fade-out 0.7s';
 }
 
-function handleCollapsable(context, openIcon, closeIcon) {
+function handleCollapsable(context, icons, axis) {
   context.classList.toggle("active");
   const content = context.nextElementSibling;
+  const isOpened = axis === 'y' ? content.style.maxHeight : content.style.maxWidth
 
-  if (content.style.maxHeight){
-    openCollapsable(context, openIcon);
+  if (isOpened){
+    closeCollapsable(context, icons?.openIcon, axis);
   } else {
-    closeCollapsable(context, closeIcon);
+    openCollapsable(context, icons?.closeIcon, axis);
   }
 }
 
-function openCollapsable(context, openIcon) {
+function closeCollapsable(context, openIcon, axis) {
   const content = context.nextElementSibling;
-  const icon = context.firstElementChild;
 
-  icon ? icon.className = `fa-solid ${openIcon}` : null;
-  content.style.maxHeight = null;
+  if (axis === 'y') {
+    const icon = context.firstElementChild;
+
+    icon ? icon.className = `fa-solid ${openIcon}` : null;
+    content.style.maxHeight = null;
+  } else if (axis === 'x') {
+    content.style.maxWidth = null;
+  } 
 }
 
-function closeCollapsable(context, closeIcon) {
+function openCollapsable(context, closeIcon, axis) {
   const content = context.nextElementSibling;
-  const icon = context.firstElementChild;
   const items = content.childElementCount;
 
-  icon ? icon.className = `fa-solid ${closeIcon}` : null;
-  content.style.maxHeight = `${items * 5}rem`;
+  if (axis === 'y') {
+    const icon = context.firstElementChild;
+
+    icon ? icon.className = `fa-solid ${closeIcon}` : null;
+    content.style.maxHeight = `${items * 5}rem`;
+  } else if (axis === 'x') {
+    content.style.maxWidth = `${items * 10}rem`;
+  }
 }
 
-for (let i = 0; i < collapsables.length; i++) {
-  collapsables[i].addEventListener('click', function () {
-    handleCollapsable(this, 'fa-plus', 'fa-minus');
+for (let i = 0; i < collapsablesY.length; i++) {
+  const icons = { 
+    openIcon: 'fa-plus',
+    closeIcon: 'fa-minus'
+  }
+  collapsablesY[i].addEventListener('click', function () {
+    handleCollapsable(this, icons, 'y');
+  })
+}
+
+for (i = 0; i < collapsablesX.length; i++) {
+  collapsablesX[i].addEventListener('click', function () {
+    handleCollapsable(this, null, 'x');
   })
 }
 
