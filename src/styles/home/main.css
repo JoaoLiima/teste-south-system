@@ -1,0 +1,133 @@
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.image-container {
+  margin-right: 5rem;
+  width: 28rem;
+  height: 45rem;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.image-container img {
+  height: 55rem;
+  margin: -10rem 0 0 -13.5rem;
+}
+
+main article {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+main .wrapper {
+  max-width: 50rem;
+}
+
+main article h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+
+  background-color: white;
+}
+
+main article p {
+  font-size: 1.5rem;
+  color: var(--gray);
+
+  background-color: white;
+}
+
+main nav {
+  width: 15rem;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 1rem 1rem;
+}
+
+main nav h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+main nav a {
+  color: var(--grey);
+  margin-bottom: 0.3rem;
+  padding: 0.5rem 0.5rem;
+  text-align: end;
+}
+
+@media (max-width: 1100px)  {
+  main {
+    flex-direction: column;
+    padding: 0 4rem;
+  }
+
+  main article h1 {
+    text-align: center;
+  }
+
+  main article p {
+    text-align: justify;
+  }
+
+  .image-container {
+    margin-right: 0;
+    margin-top: 2rem;
+    width: 45rem;
+  }
+
+  .image-container img {
+    margin: -10rem 0 0 -6rem;
+  }
+
+  main nav {
+    margin-top: 2rem;
+    width: 100%;
+    height: auto;
+    flex-direction: initial;
+    justify-content: space-between;
+  }
+
+  main nav h3 {
+    margin: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  main nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-container {
+    margin-top: 2rem;
+    width: 25rem;
+    height: 300px;
+  }
+
+  .image-container img {
+    margin: -10rem 0 0 -15.5rem;
+  }
+
+  main nav h3 {
+    margin-bottom: 1rem;
+  }
+
+  main nav a {
+    margin-bottom: 1rem;
+  }
+}

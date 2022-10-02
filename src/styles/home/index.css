@@ -1,0 +1,41 @@
+@import './header.css';
+@import './main.css';
+@import './menu.css';
+
+.icon-button {
+  color: white;
+  background-color: var(--dark-gray);
+  height: var(--menu-height);
+  width: var(--menu-height);
+}
+
+.text-button {
+  color: white;
+  background-color: var(--primary);
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  margin-right: 1rem;
+  white-space: nowrap;
+}
+
+.green-text {
+  color: var(--primary);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

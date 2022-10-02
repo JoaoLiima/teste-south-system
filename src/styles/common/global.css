@@ -1,0 +1,70 @@
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --primary: #28A745;
+    --dark-green: #317C0E;
+
+    --gray: #999999;
+    --dark-gray: #222222;
+
+    --menu-height: 5rem;
+    --menu-item-width: 50rem;
+}
+
+html {
+    font-size: 12px;
+    height: 100%;
+    font-family: 'Exo 2', sans-serif;
+}
+
+body {
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+button, select {
+    font-family: 'Exo 2', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    background-color: var(--dark-green)
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    html {
+        font-size: 16px;
+    }
+}

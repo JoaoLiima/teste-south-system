@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="O Sicredi é uma Instituição Financeira Cooperativa que oferece produtos e serviços para você, sua empresa ou seu agronegócio. Conta corrente, investimentos e financiamentos.">
+  <title>Sicredi | Gente que coopera cresce</title>
+
+  <meta name="robots" content="all">
+  <meta name="author" content="Author">
+
+  <meta property="og:type" content="page">
+  <meta property="og:url" content="localhost:3000">
+  <meta property="og:title" content="Sicredi | Gente que coopera cresce">
+  <meta property="og:image" content="www.sicredi.com.br/static/home/assets/header/novo-logo.jpg">
+  <meta property="og:description" content="O Sicredi é uma Instituição Financeira Cooperativa que oferece produtos e serviços para você, sua empresa ou seu agronegócio. Conta corrente, investimentos e financiamentos.">
+
+  <meta property="article:author" content="Author">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@username">
+  <meta name="twitter:title" content="Sicredi | Gente que coopera cresce">
+  <meta name="twitter:creator" content="@username">
+  <meta name="twitter:description" content="O Sicredi é uma Instituição Financeira Cooperativa que oferece produtos e serviços para você, sua empresa ou seu agronegócio. Conta corrente, investimentos e financiamentos.">
+
+  <!-- Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K86JG3R');
+  </script>
+
+  <!-- Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AuVFUF9VRrOQmkxfOJdOZw"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AuVFUF9VRrOQmkxfOJdOZw');
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/common/global.css">
+  <link rel="stylesheet" href="styles/home/index.css">
+  <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&display=swap">
+
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/05b1b2337d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="assets/icons/logo.svg" alt="Logo">
+    </div>
+
+    <div class="access-type">
+      <select onchange="handleOption(event)" title="Selecione se a conta vai ser acessada através de um CPF ou um CNPJ">
+        <option disabled selected>Acesse sua conta com</option>
+        <option value="cpf">CPF</option>
+        <option value="cnpj">CNPJ</option>
+      </select>
+      <input id="access-input" title="Insira os dados de acesso"  pattern="\d{4}" type="text">
+      <button title="Acesse a conta com os dados fornecidos">
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+
+    <div class="controls">
+      <button class="text-button access-account-button">Acesse sua conta</button>
+      <button class="text-button">Abra sua conta</button>
+      <button class="icon-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button class="icon-button" id="open-menu-button" onclick="openMenu()"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <div class="wrapper">
+        <h1>Nós temos as melhores oportunidades <span id="dynamic-text" class="green-text"><span></h1>
+        <p>
+          Somos o parceiro ideal para te acompanhar e ajudar em todas as suas conquistas.
+          De forma responsável e transparente, nós vamos, juntos, organizar sua vida financeira.
+        </p>
+      </div>
+    </article>
+
+    <div class="image-container">
+      <img src="./assets/images/home-image.jpg" alt="imagem de uma planta crescendo dentro de um copo de moedas">
+    </div>
+
+    <nav>
+      <h3 class="green-text">Para você</h3>
+      <a href="google.com" target="_blank">Conta corrente</a>
+      <a href="google.com" target="_blank">Cartões</a>
+      <a href="google.com" target="_blank">Consórcios</a>
+      <a href="google.com" target="_blank">Crédito</a>
+      <a href="google.com" target="_blank">Investimentos</a>
+      <a href="google.com" target="_blank">Pagamentos</a>
+    </nav>
+  </main>
+
+  <div id="menu">
+    <nav>
+      <div class="access-buttons">
+        <button class="text-button">Acesse sua conta</button>
+        <button class="text-button">Abra sua conta</button>
+      </div>
+      <button class="collapsable">Acesso rápido <i class="fa-solid fa-plus"></i></button>
+      <div class="expandable">
+        <a href="">Conta corrente</a>
+        <a href="">Cartões</a>
+        <a href="">Consórcios</a>
+        <a href="">Crédito</a>
+      </div>
+      <button class="collapsable">Para você <i class="fa-solid fa-plus"></i></button>
+      <div class="expandable">
+        <a href="">Conta corrente</a>
+        <a href="">Cartões</a>
+        <a href="">Consórcios</a>
+        <a href="">Crédito</a>
+      </div>
+      <button class="collapsable">Para sua empresa <i class="fa-solid fa-plus"></i></button>
+      <div class="expandable">
+        <a href="">Conta corrente</a>
+        <a href="">Cartões</a>
+        <a href="">Consórcios</a>
+        <a href="">Crédito</a>
+      </div>
+    </nav>
+    <button id="close-menu-button" onclick="closeMenu()"><i class="fa-solid fa-times"></i></button>
+  </div>
+
+  <script src="./scripts/home/index.js"></script>
+  <script src="./scripts/home/writer.js"></script>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K86JG3R"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+</body>
+</html>
